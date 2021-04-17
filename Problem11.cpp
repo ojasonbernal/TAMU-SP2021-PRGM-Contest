@@ -44,12 +44,12 @@ int main () {
             for(int i = 1; i < bValues.size(); i++)
             {
                 // If current element is greater than max
-                if(aValues[i] > max) {
+                if(aValues[i] >= max) {
                     max = aValues[i];
                     max_index = i;
                 }
                 // If current element is smaller than min
-                if(bValues[i] < min) {
+                if(bValues[i] <= min) {
                     min = bValues[i];
                     min_index = i;
                 }
@@ -86,12 +86,21 @@ int main () {
             // cout <<"MI: " <<max_index << endl;
             // cout <<"min: " <<min << endl;
             for(int j = 0; j < aValuesCopy.size(); ++j) {
+                // if(aValuesCopy.at(j) == max)
                 if(aValuesCopy.at(j) == max) {
-                    // cout << max << endl;
                     ACEValues.at(j) = min;
+                    break;
                 }
             }
 
+
+
+        }
+        for(int j = 0; j < aValuesCopy.size(); ++j) {
+            // if(aValuesCopy.at(j) == max)
+            if(ACEValues.at(j) == 0) {
+                ACEValues.at(j) = aValuesCopy.at(j);
+            }
         }
         // Calculate ACE values
         for(int i = 0; i < ACEValues.size(); i++) {
