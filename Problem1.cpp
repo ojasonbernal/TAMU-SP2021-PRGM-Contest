@@ -8,7 +8,7 @@ void axiom(int n){
         throw invalid_argument("error");
     }
 
-    while (n != -1){
+    while (n >= 0){
         string line;
         getline(cin,line);
         stringstream ss(line);
