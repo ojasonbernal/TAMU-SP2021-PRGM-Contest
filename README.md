@@ -6,7 +6,7 @@
   </a>
   <h3 align="center">TAMU Spring 2021 Programming Contest</h3>
   <p align="center">
-    Programming Competition Solutions
+    Programming competition solutions
   </p>
 </p>
 
